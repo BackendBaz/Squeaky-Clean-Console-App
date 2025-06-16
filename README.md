@@ -18,4 +18,5 @@ Note that the `clean` method should treat an **empty string as valid**.
    - This also applies to **leading** and **trailing spaces**.
 2. Convert **kebab-case** to **camelCase**
 3. Convert leetspeak to normal text
+   - For simplicity, we will only be replacing `4`, `3`, `0`, `1` and `7` with `a`, `e`, `o`, `l`, and `t`, respectively.
 4. Omit characters that are not letters

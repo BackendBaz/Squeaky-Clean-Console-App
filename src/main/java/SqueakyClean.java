@@ -10,7 +10,15 @@ class SqueakyClean {
                 kebabChars[i + 1] = Character.toUpperCase(kebabChars[i + 1]);
             camelCaseResult.append(kebabChars[i]);
         }
-        return camelCaseResult.toString().replace("-", "");
+        identifier = camelCaseResult.toString().replace("-", "");
+        return identifier
+                .replace('4', 'a')
+                .replace('3', 'e')
+                .replace('0', 'o')
+                .replace('1', 'l')
+                .replace('7', 't')
+                .replace("¡", "")  // ¡
+                .replace("!", ""); // !
     }
 
 }
