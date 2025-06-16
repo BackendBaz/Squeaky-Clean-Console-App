@@ -2,7 +2,15 @@ class SqueakyClean {
 
     static String clean(String identifier) {
         // Note: the input string is guaranteed to be non-null.
-        return identifier.replace(' ', '_');
+        identifier = identifier.replace(' ', '_');
+        char[] kebabChars = identifier.toCharArray();
+        StringBuilder camelCaseResult = new StringBuilder();
+        for (int i = 0; i < kebabChars.length; i++) {
+            if (kebabChars[i] == '-' && i != kebabChars.length - 1)
+                kebabChars[i + 1] = Character.toUpperCase(kebabChars[i + 1]);
+            camelCaseResult.append(kebabChars[i]);
+        }
+        return camelCaseResult.toString().replace("-", "");
     }
 
 }

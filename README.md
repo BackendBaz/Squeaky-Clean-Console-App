@@ -16,6 +16,6 @@ Note that the `clean` method should treat an **empty string as valid**.
 
 1. Replace any spaces (` `) encountered with underscores (`_`)
    - This also applies to **leading** and **trailing spaces**.
-2. Convert kebab-case to camelCase
+2. Convert **kebab-case** to **camelCase**
 3. Convert leetspeak to normal text
 4. Omit characters that are not letters
