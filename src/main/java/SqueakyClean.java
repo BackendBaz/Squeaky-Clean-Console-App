@@ -11,14 +11,13 @@ class SqueakyClean {
             camelCaseResult.append(kebabChars[i]);
         }
         identifier = camelCaseResult.toString().replace("-", "");
-        return identifier
+        identifier = identifier
                 .replace('4', 'a')
                 .replace('3', 'e')
                 .replace('0', 'o')
                 .replace('1', 'l')
-                .replace('7', 't')
-                .replace("¡", "")  // ¡
-                .replace("!", ""); // !
+                .replace('7', 't');
+        return identifier.replaceAll("\\W", "");
     }
 
 }
